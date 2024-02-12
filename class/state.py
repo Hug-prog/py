@@ -1,20 +1,22 @@
-class State:
-   def __init__(self,stateMachine) -> None:
-      self._stateMachine = stateMachine
-   
+class IState:
    def doAction(self):
       ...
+
+class State:
+   def __init__(self,stateMachine:'StateMachine') -> None:
+      self.__stateMachine = stateMachine
+   
+   def doAction(self):
+    ...
 
 class StateMachine:
-   def __init__(self,actualState) -> None:
+   def __init__(self,actualState:IState) -> None:
       self._actualState = actualState
    
-   def setState(self):
-      ...
+   def setState(self,newState:IState):
+      self._actualState = newState
+      print("state change to",newState)
 
    def doAction(self):
-      ...
-   
-   def onDoAction(self):
-      ...
+      self._actualState.doAction()
 

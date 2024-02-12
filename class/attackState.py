@@ -1,8 +1,8 @@
-from state import State
+from agent import AgentState
 
-class AttackState(State):
-   def __init__(self,stateMachine) -> None:
-      super.__init__(stateMachine)
+class AttackState(AgentState):
+   def __init__(self,stateMachine,agent) -> None:
+      super().__init__(stateMachine,agent)
    
-   def doAction(self):
-      ...
+   def onDoAction(self):
+      self.__agent.fire(True)

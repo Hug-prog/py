@@ -4,7 +4,7 @@
 classDiagram
 
 State <|-- AttackState
-State <|-- SearchState
+State <|-- ScanState
 State <|-- StateMachine
 StateMachine <|-- SpecialAgent
 State:sateMachine
@@ -14,7 +14,7 @@ class AttackState{
 doAction()void
 }
 
-class SearchState{
+class ScanState{
 doAction()void
 }
 
