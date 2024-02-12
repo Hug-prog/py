@@ -7,7 +7,7 @@ State <|-- AttackState
 State <|-- SearchState
 State <|-- StateMachine
 StateMachine <|-- SpecialAgent
-
+State:sateMachine
 State: doAction()
 
 class AttackState{
@@ -19,9 +19,10 @@ doAction()void
 }
 
 class StateMachine{
-actuelState()
+actuelState
 setState()void
 doAction()void
+onDoAction()void
 }
 
 class SpecialAgent{
