@@ -46,7 +46,7 @@ sequenceDiagram
     Agent ->>+SpecialAgent:Appel self.onUpdate()
     SpecialAgent ->>+StateMachine:self.__fsm.doAction()
     StateMachine ->>+ State:self.actuelState.doAction()
-    Sate->>+ ScanState:docAction()
+    State->>+ ScanState:docAction()
     ScanState->>+ ScanState :regarde si ennemi
      ScanState->>+ StateMachine:SetState(AttackSate)
 
@@ -54,7 +54,7 @@ sequenceDiagram
     Agent ->>+SpecialAgent:Appel self.onUpdate()
     SpecialAgent ->>+StateMachine:self.__fsm.doAction()
     StateMachine ->>+ State:self.actuelState.doAction()
-    Sate->>+ AttackState:docAction()
+    State->>+ AttackState:docAction()
     AttackState->>+ AttackState :regarde si  plus ennemi
      AttackState->>+ StateMachine:SetState(AttackSate)
 
