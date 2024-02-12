@@ -19,6 +19,7 @@ doAction()void
 }
 
 class StateMachine{
+actuelState()
 setState()void
 doAction()void
 }
