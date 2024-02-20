@@ -31,7 +31,7 @@ doAction()void
 
 ```
 
-#diagrame de séquance
+#diagrame de séquence
 
 ```mermaid
 sequenceDiagram
